@@ -23,7 +23,7 @@ During the study, the following approaches to text preprocessing and vector repr
 
 Based on the testing results, the models demonstrated the following accuracy:
 
-* **BoW (baseline)**: `0.82` 🏆
+* **BoW (baseline)**: `0.82` 
 * **TF-IDF + n-grams**: `0.77`
 * **Word2Vec**: `0.61`
 
