@@ -1,27 +1,34 @@
 # Sentiment Analysis of Restaurant Reviews
 
-Цей проєкт присвячено задачі аналізу тональності (класифікації відгуків) за допомогою різних методів векторизації тексту та машинного навчання.
+This project is dedicated to the task of sentiment analysis (review classification) using various text vectorization methods and machine learning.
 
-## Опис даних
-В якості датасету використовується набір даних [Restaurant Reviews з Kaggle](https://www.kaggle.com/datasets/shub99/sentiment-analysis-data). 
-* **Обсяг**: 1000 відгуків (500 позитивних та 500 негативних).
-* **Цільова змінна (`Liked`)**: `1` — хороший відгук, `0` — негативний відгук.
+## Data Description
 
-## Методи та підходи
-У ході дослідження було реалізовано та протестовано наступні підходи до передобробки та векторного представлення тексту в зв'язці з логістичною регресією (`LogisticRegression`):
-1. **Bag-of-Words (BoW)** — базове частотне представлення слів.
-2. **TF-IDF + n-grams** — врахування важливості слів із використанням n-грам.
-3. **Word2Vec** — щільні векторні ембедінги слів (бібліотека `gensim`).
+The dataset used is the [Restaurant Reviews from Kaggle](https://www.kaggle.com/datasets/shub99/sentiment-analysis-data).
 
-Для пошуку оптимальних гіперпараметрів моделей застосовувався `GridSearchCV`.
+* **Size**: 1,000 reviews (500 positive and 500 negative).
+* **Target variable (`Liked`)**: `1` — positive review, `0` — negative review.
 
-## Результати порівняння моделей (Accuracy)
-За результатами тестування моделі продемонстрували таку точність (Accuracy):
+## Methods and Approaches
+
+During the study, the following approaches to text preprocessing and vector representation were implemented and tested in conjunction with logistic regression (`LogisticRegression`):
+
+1. **Bag-of-Words (BoW)** — basic word frequency representation.
+2. **TF-IDF + n-grams** — accounting for word importance using n-grams.
+3. **Word2Vec** — dense vector word embeddings (`gensim` library).
+
+`GridSearchCV` was used to find the optimal hyperparameters for the models.
+
+## Model Comparison Results (Accuracy)
+
+Based on the testing results, the models demonstrated the following accuracy:
+
 * **BoW (baseline)**: `0.82` 🏆
 * **TF-IDF + n-grams**: `0.77`
 * **Word2Vec**: `0.61`
 
-## Стек технологій
+## Tech Stack
+
 * Python
 * Pandas, NumPy
 * Scikit-learn (CountVectorizer, TfidfVectorizer, LogisticRegression, GridSearchCV)
